@@ -13,12 +13,10 @@ var firebaseConfig = {
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       
-      // programe a função addUser():
+      
       function addUser()
       {
-        // Obtenha o nome do usuário a partir da input box, com a id da input box. E,armazene-o dentro de uma variável.
         userName = document.getElementById("userName").value;
-        // adicione o valor dessa variável ao firebase: 
         firebase.database().ref("/").child(userName).update({
           purpose : "adding user"
         });
